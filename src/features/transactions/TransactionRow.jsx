@@ -1,4 +1,3 @@
-// Import shared formatting utilities.
 import { formatCurrency } from "../../utils/formatCurrency";
 import { formatDate } from "../../utils/formatDate";
 
