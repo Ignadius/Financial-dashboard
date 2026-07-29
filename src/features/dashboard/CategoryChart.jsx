@@ -1,4 +1,3 @@
-// Import the Recharts components required for the pie chart.
 import {
   Cell,
   Legend,
@@ -8,7 +7,6 @@ import {
   Tooltip,
 } from "recharts";
 
-// Import the shared currency formatter.
 import { formatCurrency } from "../../utils/formatCurrency";
 
 // Define reusable colours for the category slices.
@@ -17,14 +15,11 @@ const CHART_COLORS = ["#2563eb", "#16a34a", "#f59e0b", "#dc2626", "#9333ea"];
 function CategoryChart({ data }) {
   return (
     <section className="chart-card">
-      {/* Chart heading */}
       <h2>Spending by Category</h2>
 
-      {/* Provide the fixed height required by ResponsiveContainer. */}
       <div className="chart-container">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
-            {/* Create one pie slice for every category. */}
             <Pie
               data={data}
               dataKey="value"
@@ -42,7 +37,6 @@ function CategoryChart({ data }) {
               ))}
             </Pie>
 
-            {/* Format tooltip values as euros. */}
             <Tooltip
               formatter={(value) => formatCurrency(value)}
               contentStyle={{
@@ -52,7 +46,6 @@ function CategoryChart({ data }) {
               }}
             />
 
-            {/* Display the category names beside the chart. */}
             <Legend
               formatter={(value) => (
                 <span style={{ color: "var(--text-secondary)" }}>{value}</span>
