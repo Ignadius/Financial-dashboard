@@ -1,0 +1,186 @@
+.dashboard {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: var(--page-background);
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  color: var(--text-heading);
+}
+
+.theme-toggle {
+  min-height: 2.5rem;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  color: var(--text-primary);
+  background-color: var(--control-background);
+  cursor: pointer;
+}
+
+/* Responsive container for the summary cards */
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Individual financial summary card */
+.summary-card {
+  padding: 1.5rem;
+  background-color: var(--surface-background);
+  border-radius: 0.75rem;
+  box-shadow: var(--card-shadow);
+}
+
+/* Summary card title */
+.summary-card h2 {
+  margin: 0 0 0.5rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+/* Summary card amount */
+.summary-card p {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+/* Container for the transaction list */
+.transactions-section {
+  padding: 1.5rem;
+  background-color: var(--surface-background);
+  border-radius: 0.75rem;
+  box-shadow: var(--card-shadow);
+}
+
+/* Transaction section heading */
+.transactions-section h2 {
+  margin: 0 0 1.25rem;
+  color: var(--text-heading);
+}
+
+/* Stack summary cards on smaller screens */
+@media (max-width: 768px) {
+  .dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard {
+    padding: 1rem;
+  }
+}
+
+/* Card containing the financial chart */
+.chart-card {
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: var(--surface-background);
+  border-radius: 0.75rem;
+  box-shadow: var(--card-shadow);
+}
+
+/* Chart heading */
+.chart-card h2 {
+  margin: 0 0 1.25rem;
+  color: var(--text-heading);
+}
+
+/* Gives ResponsiveContainer a defined height */
+.chart-container {
+  width: 100%;
+  height: 300px;
+}
+
+/* Responsive grid containing the dashboard charts */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Remove the individual chart margin because the grid controls spacing */
+.charts-grid .chart-card {
+  margin-bottom: 0;
+}
+
+/* Stack charts vertically on smaller screens */
+@media (max-width: 900px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card containing the transaction form */
+.form-section {
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: var(--surface-background);
+  border-radius: 0.75rem;
+  box-shadow: var(--card-shadow);
+}
+
+/* Transaction form section heading */
+.form-section h2 {
+  margin: 0 0 1.25rem;
+  color: var(--text-heading);
+}
+
+/* Container for all dashboard filters. */
+.dashboard-filter {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Keep each label above its control. */
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* Style filter labels. */
+.filter-field label {
+  color: var(--text-label);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Shared styles for filter controls. */
+.filter-field input,
+.filter-field select,
+.dashboard-filter button {
+  min-height: 2.5rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  color: var(--text-primary);
+  background-color: var(--control-background);
+  font: inherit;
+}
+
+/* Show that the reset button is interactive. */
+.dashboard-filter button {
+  cursor: pointer;
+}
