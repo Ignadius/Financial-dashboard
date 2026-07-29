@@ -1,4 +1,3 @@
-// Import the component responsible for rendering one transaction.
 import TransactionRow from "./TransactionRow";
 
 function TransactionList({
