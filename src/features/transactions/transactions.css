@@ -14,7 +14,6 @@
   border-bottom: 1px solid var(--row-border-color);
 }
 
-/* Delete transaction button. */
 .delete-transaction-button {
   padding: 0.5rem 0.75rem;
   border: 1px solid #dc2626;
@@ -24,12 +23,10 @@
   cursor: pointer;
 }
 
-/* Give visual feedback when hovering with a mouse. */
 .delete-transaction-button:hover {
   background-color: var(--danger-hover-background);
 }
 
-/* Empty transaction list message. */
 .empty-transactions {
   margin: 0;
   color: var(--text-secondary);
@@ -46,7 +43,6 @@
   }
 }
 
-/* Responsive layout for the transaction form */
 .transaction-form {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -61,14 +57,12 @@
   gap: 0.4rem;
 }
 
-/* Form label styling */
 .form-field label {
   color: var(--text-label);
   font-size: 0.875rem;
   font-weight: 600;
 }
 
-/* Shared styling for form controls */
 .form-field input,
 .form-field select {
   min-height: 2.75rem;
@@ -87,7 +81,6 @@
   font-size: 0.75rem;
 }
 
-/* Transaction form submit button */
 .transaction-form button {
   min-height: 2.75rem;
   padding: 0.7rem 1rem;
@@ -111,26 +104,22 @@
   }
 }
 
-/* Groups the form action buttons together. */
 .form-actions {
   display: flex;
   gap: 0.5rem;
 }
 
-/* Secondary button used to cancel editing. */
 .cancel-edit-button {
   background-color: var(--control-background);
   border: 1px solid var(--border-color);
   color: var(--text-label);
 }
 
-/* Transaction row action buttons. */
 .transaction-actions {
   display: flex;
   gap: 0.5rem;
 }
 
-/* Button used to reveal more transactions. */
 .show-more-button {
   display: block;
   margin: 1.5rem auto 0;
@@ -142,7 +131,6 @@
   cursor: pointer;
 }
 
-/* Provide visual feedback on hover. */
 .show-more-button:hover {
   background-color: var(--hover-background);
 }
