@@ -137,7 +137,6 @@ function Dashboard() {
   // Render the complete dashboard interface.
   return (
     <main className="dashboard">
-      {/* Main dashboard heading and theme control */}
       <header className="dashboard-header">
         <h1>Financial Dashboard</h1>
 
@@ -155,9 +154,7 @@ function Dashboard() {
         </button>
       </header>
 
-      {/* Filter transactions by month, type, category, or search text. */}
       <div className="dashboard-filter">
-        {/* Month filter */}
         <div className="filter-field">
           <label htmlFor="month-filter">Month</label>
 
@@ -171,8 +168,6 @@ function Dashboard() {
             }}
           />
         </div>
-
-        {/* Transaction type filter */}
         <div className="filter-field">
           <label htmlFor="type-filter">Type</label>
 
@@ -189,8 +184,6 @@ function Dashboard() {
             <option value="expense">Expenses</option>
           </select>
         </div>
-
-        {/* Transaction category filter */}
         <div className="filter-field">
           <label htmlFor="category-filter">Category</label>
 
@@ -210,8 +203,6 @@ function Dashboard() {
             ))}
           </select>
         </div>
-
-        {/* Search by transaction description or category. */}
         <div className="filter-field">
           <label htmlFor="transaction-search">Search</label>
 
@@ -226,8 +217,6 @@ function Dashboard() {
             }}
           />
         </div>
-
-        {/* Transaction sorting controls */}
         <div className="filter-field">
           <label htmlFor="sort-by">Sort by</label>
 
@@ -260,8 +249,6 @@ function Dashboard() {
             <option value="asc">Ascending</option>
           </select>
         </div>
-
-        {/* Show the button only when at least one filter is active. */}
         {(selectedMonth ||
           selectedType !== "all" ||
           selectedCategory !== "all" ||
@@ -282,14 +269,12 @@ function Dashboard() {
         )}
       </div>
 
-      {/* Display totals calculated from the filtered transactions. */}
       <section className="summary">
         <SummaryCard title="Balance" amount={balance} />
         <SummaryCard title="Income" amount={income} />
         <SummaryCard title="Expenses" amount={expenses} />
       </section>
 
-      {/* Form for creating new transactions. */}
       <section className="form-section">
         <h2>{editingTransaction ? "Edit Transaction" : "Add Transaction"}</h2>
         <TransactionForm
