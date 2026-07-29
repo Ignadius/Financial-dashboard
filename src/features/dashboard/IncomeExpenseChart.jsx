@@ -26,29 +26,23 @@ function IncomeExpenseChart({ income, expenses }) {
 
   return (
     <section className="chart-card">
-      {/* Chart heading */}
       <h2>Income vs Expenses</h2>
 
       {/* ResponsiveContainer makes the chart adapt to its parent width. */}
       <div className="chart-container">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={chartData}>
-            {/* Horizontal grid lines improve readability. */}
             <CartesianGrid
               stroke="var(--border-color)"
               strokeDasharray="3 3"
             />
-
-            {/* Displays the category name below each bar. */}
+            
             <XAxis
               dataKey="name"
               tick={{ fill: "var(--text-secondary)" }}
             />
-
-            {/* Displays the numeric scale. */}
             <YAxis tick={{ fill: "var(--text-secondary)" }} />
 
-            {/* Shows the value when the user hovers over a bar. */}
             <Tooltip
               contentStyle={{
                 color: "var(--text-primary)",
@@ -57,7 +51,6 @@ function IncomeExpenseChart({ income, expenses }) {
               }}
             />
 
-            {/* Use green for income and red for expenses. */}
             <Bar dataKey="amount">
               {chartData.map((entry) => (
                 <Cell key={entry.name} fill={entry.color} />
